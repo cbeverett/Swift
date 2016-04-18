@@ -33,6 +33,7 @@ func getNumber(name:String) -> Int {
 let first: Int = getNumber("first")
 let second: Int = getNumber("second")
 
+// operations is a list of tuples that include the name of the operation and a closure capturing the operation
 var operations : [(String, (Int, Int) -> Int)] = [("+", {$0 + $1}), ("-", {$0 - $1}), ("*", {$0 * $1}), ("/",{$0 / $1}) ]
 
 for (opname, operation) in operations {
