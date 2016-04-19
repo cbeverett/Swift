@@ -8,7 +8,7 @@
 
 import Foundation
 
-// Function Declaration
+// Function Declarations
 func getNumber(prompt:String) -> Int {
     var returnValue:Int = -1
     
@@ -42,16 +42,22 @@ func getCurrentYear() -> Int {
     return year
 }
 
+// Input
 let currentAge = getNumber("What is your current age? ")
 let retirementAge = getNumber("At what age would you like to retire? ")
-let currentYear = getCurrentYear()
 
+// Calculations
+let currentYear = getCurrentYear()
+let workYears = retirementAge - currentAge
+let retirementYear = currentYear + workYears
+
+// Output
 if currentAge >= retirementAge {
     print("Go ahead and retire...What are you waiting for?")
 }
 else {
-    print("You have \(retirementAge - currentAge) years left until you can retire.")
-    print("It's \(currentYear), so you can retire in \(currentYear + retirementAge - currentAge).")
+    print("You have \(workYears) years left until you can retire.")
+    print("It's \(currentYear), so you can retire in \(retirementYear).")
 }
 
 
